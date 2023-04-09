@@ -18,7 +18,7 @@ public class ControlCommand implements CommandExecutor {
         main.getConfig().set("quitMessage", main.quitMessage);
         main.getConfig().set("deathMessage", main.deathMessage);
         main.getConfig().set("advancementMessage", main.advancementMessage);
-        main.getConfig().set("chat", main.chatMessage);
+        main.getConfig().set("chatMessage", main.chatMessage);
         main.saveConfig();
     }
 
