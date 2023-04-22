@@ -7,6 +7,9 @@ configurations {
     jar.archiveFileName = '../Control.jar'
 }
 
+group = 'com.yj0524'
+version = '1.0.2'
+
 repositories {
     mavenLocal()
     maven {
@@ -46,10 +49,19 @@ tasks.withType(Javadoc) {
     options.encoding = 'UTF-8'
 }
 
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
 task cleanCustom(type: Delete) {
-    delete 'Server/plugins/libs'
-    delete 'Server/plugins/classes'
-    delete 'Server/plugins/generated'
-    delete 'Server/plugins/resources'
-    delete 'Server/plugins/tmp'
+    delete 'build/libs'
+    delete 'build/classes'
+    delete 'build/generated'
+    delete 'build/resources'
+    delete 'build/tmp'
 }
