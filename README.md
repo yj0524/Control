@@ -1,4 +1,4 @@
-# Control (Paper 1.19.4)
+# Control (Paper 1.16 ~ 1.19.4)
 
 ## 사용법
 /plugins/Control/config.yml 파일에 있는 값을 입력하거나, /control <type> <bool> 명령어를 입력하여 사용할 수 있습니다.
