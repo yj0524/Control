@@ -19,6 +19,9 @@ public class ConfigReloadCommand implements CommandExecutor {
             main.loadConfig();
             sender.sendMessage("§aConfig Reloaded!");
         }
+        else {
+            sender.sendMessage("§cYou don't have permission to use this command!");
+        }
         return false;
     }
 }
